@@ -51,6 +51,11 @@ public class CalcJunitTest {
 	}
 	
 	@Test
+	public void testDivZero(){
+		assertTrue("Divide zero failed.", Calc.div(0, 1)==0);
+	}
+	
+	@Test
 	public void testDivNegInt(){
 		assertTrue("Divide neg ints failed.", Calc.div(-10, -2)==5);
 	}
@@ -78,6 +83,11 @@ public class CalcJunitTest {
 	@Test
 	public void testSubTwoInt(){
 		assertTrue("Sub two ints failed.", Calc.sub(4, 5)==-1);
+	}
+	
+	@Test
+	public void testSubPosNeg(){
+		assertTrue("Sub pos by neg failed.", Calc.sub(4, -5)==9);
 	}
 	
 	@Test
